@@ -1,0 +1,15 @@
+[
+  {
+    "relation": [
+      "delegate_permission/common.handle_all_urls"
+    ],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "com.arguuu.app",
+      "sha256_cert_fingerprints": [
+        "62:84:56:6A:EA:BC:D8:D8:20:9F:4E:4E:1C:14:E1:6A:B6:1F:3E:81:4F:19:29:DD:EC:A6:90:BC:A2:1D:60:41",
+        "95:11:05:48:DB:8C:6C:D5:1A:AC:86:1B:9B:5C:2F:98:D1:06:D5:5A:ED:1E:61:81:02:06:80:71:D4:7C:F4:1B"
+      ]
+    }
+  }
+]
