@@ -3,8 +3,24 @@
 <head>
   <base href="/">
 
+  <script>
+    // Android Deep Link Fallback (FR-DEEPLINK-FALLBACK)
+    // If the user lands here on Android, it means they don't have the app installed 
+    // (otherwise the OS would have intercepted the link via App Links).
+    // In this case, we redirect them to the Play Store.
+    (function() {
+      const ua = navigator.userAgent.toLowerCase();
+      if (/android/.test(ua) && !/localhost|127\.0\.0\.1/.test(window.location.hostname)) {
+        // Redirect to Play Store
+        window.location.href = "https://play.google.com/store/apps/details?id=com.arguuu.app";
+      }
+    })();
+  </script>
+
   <meta charset="UTF-8">
   <meta content="IE=Edge" http-equiv="X-UA-Compatible">
+  <meta name="google-site-verification" content="googlee44ee796011ac16d" />
+  <meta name="google-site-verification" content="dRLJvaOJw3_mZcXlaKGgqBKMNl9CjcRMqYyytNm74Wk" />
   
   <!-- Primary Meta Tags -->
   <title>Arguuu | The Global Debate Arena - Win with Wits</title>
