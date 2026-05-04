@@ -1,0 +1,15 @@
+# Arguuu Robots.txt - Maximizing Crawl Efficiency
+User-agent: *
+Allow: /
+Disallow: /cgi-bin/
+Disallow: /private/
+
+# Sitemaps
+Sitemap: https://arguuu-web.vercel.app/sitemap.xml
+
+# Crawl-delay for non-major bots to save resources
+User-agent: BLEXBot
+Crawl-delay: 10
+
+User-agent: dotbot
+Crawl-delay: 10

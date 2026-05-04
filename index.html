@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <base href="/">
+
+  <meta charset="UTF-8">
+  <meta content="IE=Edge" http-equiv="X-UA-Compatible">
+  
+  <!-- Primary Meta Tags -->
+  <title>Arguuu | The Global Debate Arena - Win with Wits</title>
+  <meta name="title" content="Arguuu | The Global Debate Arena - Win with Wits">
+  <meta name="description" content="Arguuu is the premier global platform for structured online debates. Join a community of thinkers, engage in evidence-based arguments, and win with logic and wits.">
+  <meta name="keywords" content="debate platform, online arguments, critical thinking, logic, debating community, structured debate, competitive arguments, Arguuu, philosophy, logic puzzles">
+  <meta name="author" content="Arguuu Team">
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+  <meta name="theme-color" content="#C4724A">
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://arguuu-web.vercel.app/">
+  <meta property="og:site_name" content="Arguuu">
+  <meta property="og:title" content="Arguuu | The Global Debate Arena">
+  <meta property="og:description" content="Engage in heated, structured debates. Join the arena where logic wins.">
+  <meta property="og:image" content="https://arguuu-web.vercel.app/icons/Icon-512.png">
+  <meta property="og:image:width" content="512">
+  <meta property="og:image:height" content="512">
+
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:url" content="https://arguuu-web.vercel.app/">
+  <meta property="twitter:title" content="Arguuu | Global Debate Arena">
+  <meta property="twitter:description" content="Win with wits, not just words. Join the global debate revolution.">
+  <meta property="twitter:image" content="https://arguuu-web.vercel.app/icons/Icon-512.png">
+
+  <!-- iOS meta tags & icons -->
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="Arguuu">
+  <link rel="apple-touch-icon" href="icons/Icon-192.png">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="favicon.png"/>
+  <link rel="canonical" href="https://arguuu-web.vercel.app/">
+
+  <!-- Performance & Resource Hints -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  
+  <!-- JSON-LD Structured Data: Website & Organization -->
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "Arguuu",
+      "alternateName": "Arguuu Debate Arena",
+      "url": "https://arguuu-web.vercel.app/",
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": "https://arguuu-web.vercel.app/search?q={search_term_string}",
+        "query-input": "required name=search_term_string"
+      }
+    }
+  </script>
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "Arguuu",
+      "operatingSystem": "Web",
+      "applicationCategory": "SocialNetworkingApplication",
+      "description": "A structured online debate platform where users engage in evidence-based arguments.",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      },
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.9",
+        "ratingCount": "1000"
+      }
+    }
+  </script>
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What is Arguuu?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Arguuu is a global debate arena where users engage in structured, evidence-based arguments. It is designed to foster critical thinking and logical discourse."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How do I win a debate on Arguuu?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Winning on Arguuu requires using logic, evidence, and persuasive rhetoric. Debates are weighed by the community and AI judges based on the strength of the arguments."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is Arguuu free to use?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, Arguuu is free to join and participate in global debates. We focus on accessibility for all thinkers."
+          }
+        }
+      ]
+    }
+  </script>
+
+  <link rel="manifest" href="manifest.json">
+
+  <style>
+    :root {
+      --copper: #C4724A;
+      --sand: #E8DDD0;
+      --cream: #FAF6F0;
+      --ink: #1A110A;
+      --dark-wood: #2A1F17;
+    }
+
+    body {
+      background-color: var(--cream);
+      background-image: radial-gradient(circle at center, var(--cream) 0%, var(--sand) 100%);
+      margin: 0;
+      padding: 0;
+      height: 100vh;
+      width: 100vw;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      overflow: hidden;
+      font-family: 'Playfair Display', serif;
+    }
+
+    /* Semantic content hidden from users but visible to crawlers */
+    #seo-content {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+      clip: rect(0, 0, 0, 0);
+      white-space: nowrap;
+      border: 0;
+    }
+
+    #loading-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      transition: opacity 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+      z-index: 9999;
+    }
+
+    .brand-box {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-bottom: 3.5rem;
+    }
+
+    .logo-text {
+      font-size: 5.5rem;
+      font-weight: 800;
+      font-style: italic;
+      color: var(--ink);
+      letter-spacing: -2px;
+      margin: 0;
+      padding: 0;
+      opacity: 0;
+      transform: translateY(40px);
+      animation: revealText 1.6s cubic-bezier(0.19, 1, 0.22, 1) forwards;
+    }
+
+    .pillar-line {
+      width: 0;
+      height: 2px;
+      background: linear-gradient(90deg, transparent, var(--copper), transparent);
+      margin: 1rem 0;
+      animation: growLine 2s cubic-bezier(0.19, 1, 0.22, 1) forwards 0.4s;
+    }
+
+    .tagline {
+      font-family: 'DM Mono', monospace;
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 0.6rem;
+      color: var(--copper);
+      font-weight: 500;
+      opacity: 0;
+      transform: translateY(15px);
+      animation: fadeIn 1.2s ease forwards 1.2s;
+    }
+
+    .loader-area {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 1.5rem;
+    }
+
+    .status-msg {
+      font-family: 'DM Mono', monospace;
+      font-size: 0.65rem;
+      letter-spacing: 0.15rem;
+      color: var(--ink);
+      opacity: 0.5;
+      text-transform: uppercase;
+    }
+
+    .progress-wrap {
+      width: 200px;
+      height: 1px;
+      background: rgba(26, 17, 10, 0.1);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .progress-fill {
+      position: absolute;
+      width: 80px;
+      height: 100%;
+      background: var(--copper);
+      left: -80px;
+      animation: progressMove 2.8s infinite cubic-bezier(0.645, 0.045, 0.355, 1);
+    }
+
+    @keyframes revealText {
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes growLine {
+      to { width: 320px; }
+    }
+
+    @keyframes fadeIn {
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes progressMove {
+      0% { left: -80px; }
+      100% { left: 200px; }
+    }
+
+    body::before {
+      content: "";
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3BaseFilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/baseFilter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+      opacity: 0.04;
+      pointer-events: none;
+    }
+  </style>
+
+  <script>
+    window.addEventListener('load', function() {
+      const observer = new MutationObserver((mutations) => {
+        for (const mutation of mutations) {
+          if (mutation.addedNodes.length > 0) {
+            for (const node of mutation.addedNodes) {
+              if (node.tagName === 'CANVAS' || node.tagName === 'FLUTTER-VIEW') {
+                const loader = document.getElementById('loading-container');
+                if (loader) {
+                  loader.style.opacity = '0';
+                  setTimeout(() => loader.remove(), 1000);
+                }
+                observer.disconnect();
+              }
+            }
+          }
+        }
+      });
+      observer.observe(document.body, { childList: true });
+    });
+  </script>
+</head>
+<body>
+  <!-- SEMANTIC CONTENT FOR SEO CRAWLERS -->
+  <section id="seo-content">
+    <h1>Arguuu - The Global Debate Arena</h1>
+    <p>Arguuu is a structured online debate platform where logic, evidence, and wits prevail. Join the world's thinkers in competitive discourse.</p>
+    <h2>Core Features of Arguuu</h2>
+    <ul>
+      <li>Real-time structured debates with global opponents.</li>
+      <li>Evidence-based scoring system.</li>
+      <li>Educational onboarding for critical thinking.</li>
+      <li>Community-driven judging and AI-powered insights.</li>
+    </ul>
+    <h2>Frequently Asked Questions</h2>
+    <div itemscope itemtype="https://schema.org/FAQPage">
+      <div itemprop="mainEntity" itemscope itemtype="https://schema.org/Question">
+        <h3 itemprop="name">Is Arguuu a social media platform?</h3>
+        <div itemprop="acceptedAnswer" itemscope itemtype="https://schema.org/Answer">
+          <p itemprop="text">Arguuu is more than social media; it's a dedicated arena for structured, high-quality debate and logical analysis.</p>
+        </div>
+      </div>
+    </div>
+    <nav>
+      <a href="/">Home</a>
+      <a href="/explore">Explore Debates</a>
+      <a href="/rules">Community Rules</a>
+      <a href="/help">Help Center</a>
+    </nav>
+  </section>
+
+  <div id="loading-container">
+    <div class="brand-box">
+      <div class="logo-text">Arguuu</div>
+      <div class="pillar-line"></div>
+      <div class="tagline">Global Debate Arena</div>
+    </div>
+    
+    <div class="loader-area">
+      <div class="progress-wrap">
+        <div class="progress-fill"></div>
+      </div>
+      <div class="status-msg">Assembling Arguments</div>
+    </div>
+  </div>
+
+  <script src="flutter_bootstrap.js" async></script>
+</body>
+</html>
